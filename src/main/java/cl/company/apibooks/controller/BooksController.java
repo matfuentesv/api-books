@@ -17,6 +17,6 @@ public class BooksController {
     @GetMapping(value = "/books", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<String> getAllMovies() {
         log.info("Se solicita la lista de todas las películas.");
-        return ResponseEntity.ok("Hola Mundo");
+         return ResponseEntity.ok("Hola Mundo");
     }
 }
