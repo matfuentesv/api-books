@@ -1,16 +1,15 @@
 package cl.company.apibooks.service;
 
-import cl.company.apibooks.model.Libro;
+import cl.company.apibooks.model.Book;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface BookService {
 
-    List<Libro> findAll();
-    Libro findBook(Long id);
-    Libro createBook(Libro book);
-    Libro updateBook(Libro book);
+    List<Book> findAll();
+    Book findBook(Long id);
+    Book createBook(Book book);
+    Book updateBook(Book book);
     void deleteBook(Long id);
 
 }

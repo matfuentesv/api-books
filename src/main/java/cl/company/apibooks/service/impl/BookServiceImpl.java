@@ -1,6 +1,6 @@
 package cl.company.apibooks.service.impl;
 
-import cl.company.apibooks.model.Libro;
+import cl.company.apibooks.model.Book;
 import cl.company.apibooks.repository.BookRepository;
 import cl.company.apibooks.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,27 +15,27 @@ public class BookServiceImpl implements BookService {
     private BookRepository bookRepository;
 
     @Override
-    public List<Libro> findAll() {
+    public List<Book> findAll() {
         return bookRepository.findAll();
     }
 
     @Override
-    public Libro findBook(Long id) {
+    public Book findBook(Long id) {
         if(bookRepository.findById(id).isPresent()){
             return bookRepository.findById(id).get();
         } else {
-            return new Libro();
+            return new Book();
         }
 
     }
 
     @Override
-    public Libro createBook(Libro book) {
+    public Book createBook(Book book) {
         return bookRepository.save(book);
     }
 
     @Override
-    public Libro updateBook(Libro book) {
+    public Book updateBook(Book book) {
         return bookRepository.save(book);
     }
 
